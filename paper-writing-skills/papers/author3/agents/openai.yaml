@@ -1,0 +1,4 @@
+interface:
+  display_name: "Libo Abstract and Introduction"
+  short_description: "Scene-to-mechanism writing for restoration and vision papers"
+  default_prompt: "Use $libo-abstract-intro-writing to draft or revise an English Abstract or Introduction from supplied evidence."

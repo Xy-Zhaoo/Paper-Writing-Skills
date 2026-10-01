@@ -1,0 +1,4 @@
+interface:
+  display_name: "JZ Abstract and Introduction"
+  short_description: "Evidence-first, mechanism-driven writing for ML systems papers"
+  default_prompt: "Use $jz-abstract-intro to draft or revise an English Abstract or Introduction from supplied evidence."

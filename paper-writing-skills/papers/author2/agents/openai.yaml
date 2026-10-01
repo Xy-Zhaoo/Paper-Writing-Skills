@@ -1,0 +1,4 @@
+interface:
+  display_name: "KL Abstract and Introduction"
+  short_description: "Mechanism-to-deployment writing for practical ML papers"
+  default_prompt: "Use $kl-abstract-intro to draft or revise an English Abstract or Introduction from supplied evidence."
