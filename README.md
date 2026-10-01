@@ -4,23 +4,23 @@
 
 Three standalone skills for drafting and revising English paper Abstracts and Introductions.
 
-每个目录都包含自己的 `SKILL.md`、`agents/openai.yaml` 和 `references/phrase-bank.md`，运行时不依赖其他 Skill，也不依赖论文 PDF。
+每个目录都包含自己的 `SKILL.md`、`agents/openai.yaml` 和 `references/phrase-bank.md`。
 
 Each package contains its own `SKILL.md`, `agents/openai.yaml`, and `references/phrase-bank.md`. No other skill or source-paper PDF is required at runtime.
 
 ## 选择 Skill / Choose a Skill
 
-- **author1**：证据优先的系统论文论证。适合量化、注意力和推理加速，强调计算瓶颈、失败机制、组件收益，以及 kernel 与端到端结果的区分。
+- **author1**：适合写量化、注意力和推理加速类论文。它会先说明系统哪里变慢、现有方法为什么不够，再把各个设计和实验结果对应起来，同时区分单个算子加速和整体运行速度。
 
-  **Evidence-first systems arguments.** Best for quantization, attention, and inference acceleration, with explicit bottlenecks, failure mechanisms, component-level gains, and separate kernel/end-to-end evidence.
+  **For quantization, attention, and inference acceleration.** It explains where the system slows down, why existing methods fall short, how each design choice helps, and how local speedups translate to end-to-end performance.
 
-- **author2**：从机制到部署的论证。适合说明一个有吸引力的方向为何在困难场景下失效，并将隐藏因素连接到设计决策和部署约束。
+- **author2**：适合写实用型方法论文。它会先说明一个看起来可行的方法为什么在更难的场景下失效，再找出背后的关键原因，并说明新方法怎样解决问题、实际部署需要付出什么代价。
 
-  **Mechanism-to-deployment arguments.** Best when an attractive practical direction fails in a hard regime because of an overlooked factor, and the method must state a clear deployment contract.
+  **For practical ML methods.** It shows why a promising approach breaks in harder cases, identifies the main reason, and connects the proposed fix to its real deployment requirements and trade-offs.
 
-- **author3**：从真实场景到机制的恢复任务论证。适合视觉、图像恢复和新型退化问题，强调采集条件、物理机制、数据构建和组件映射。
+- **author3**：适合写视觉、图像恢复和新型图像问题。它会从真实使用场景和图像是如何受损讲起，再介绍数据如何获得、模型如何设计，以及每个模块具体解决什么问题。
 
-  **Scene-to-mechanism restoration arguments.** Best for vision and restoration papers centered on real capture conditions, physical degradation, data construction, and component-to-challenge mapping.
+  **For vision and image restoration papers.** It starts from the real capture or usage setting, explains how the image is degraded, and then connects the data, model components, and restoration results in plain terms.
 
 三种 Skill 共享证据约束，但保留不同的论证路径。请选择与论文核心推理方式最匹配的目录。
 
@@ -48,17 +48,3 @@ Use the installed skill by its configured name and provide research notes, a dra
 每个 `references/phrase-bank.md` 按 rhetorical function 整理可填槽英文句式：Problem、Gap、Failure、Mechanism、Observation、Method Transition、Component Mapping、Practicalization、Evidence、Cost/Guarantee、Scope 和 Contribution。
 
 Each `references/phrase-bank.md` organizes fill-slot English sentence structures by rhetorical function: Problem, Gap, Failure, Mechanism, Observation, Method Transition, Component Mapping, Practicalization, Evidence, Cost/Guarantee, Scope, and Contribution.
-
-请用论文事实替换 slot，并根据上下文改写；句式库不是普通同义词表，也不是应原样粘贴的论文文本。
-
-Replace the slots with paper-specific evidence and adapt the syntax to context. The phrase bank is neither a synonym list nor text to paste unchanged.
-
-## 公开内容 / Public Contents
-
-公开版本仅包含三个写作 Skill，不包含文章 PDF：
-
-The public version contains only the three writing skills and no article PDFs:
-
-- `papers/author1/`
-- `papers/author2/`
-- `papers/author3/`
